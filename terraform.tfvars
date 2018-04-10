@@ -1,68 +1,7 @@
-iam_user_names                       = ["aws","okta"]
+iam_user_names                       = ["okta"]
 iam_user_access_key                  = "true"
-iam_user_gpg_keybase                 = { orange = "keybase:aaomoware" mango = "keybase:aaomoware" }
+iam_user_gpg_keybase                 = { okta = "keybase:aaomoware" }
 iam_user_gpg_or_keybase              = "keybase"
-iam_user_group_membership_name       = "aws-okta"
-iam_user_group_membership_group      = ["aws-okta"]
-iam_user_password_reset_required     = false
-
-# - groups
-iam_group_path                       = { sales_team = "/path/to/sales_team/" accounts_team = "/path/to/accounts_team/" devops_engineers = "/" }
-iam_group_names                      = [ "sales_team", "accounts_team", "devops_engineers" ]
-
-iam_group_policy_names               = ["sales_team", "accounts_team", "devops_engineers"]
-iam_group_policy_policy              = {
-sales_team = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "ec2:Describe*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-EOF
-
-accounts_team = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "ec2:Describe*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-EOF
-
-devops_engineers = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "ec2:Describe*"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-EOF
-}
-
-iam_group_policy_groups = {
-  sales_team = "sales_team"
-  accounts_team = "accounts_team"
-  devops_engineers = "devops_engineers"
-}
 
 
 # - role

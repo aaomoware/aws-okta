@@ -20,20 +20,6 @@ module "iam_role" {
   iam_role_policy_policy               = "${var.iam_role_policy_policy}"
 }
 
-
-module "iam_group" {
-  source = "git@github.com:aaomoware/terraform-modules.git//aws/iam/iam_group"
-
-# - groups
-  iam_group_path                       = "${var.iam_group_path}"
-  iam_group_names                      = "${var.iam_group_names}"
-
-  iam_group_policy_names               = "${var.iam_group_policy_names}"
-  iam_group_policy_policy              = "${var.iam_group_policy_policy}"
-  iam_group_policy_groups              = "${var.iam_group_policy_groups}"
-}
-
-
 module "iam_user" {
   source = "git@github.com:aaomoware/terraform-modules.git//aws/iam/iam_user"
 
