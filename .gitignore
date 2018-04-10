@@ -4,4 +4,4 @@
 
 # Module directory
 .terraform/
-metadata/**
+metadata/saml-metadata.xml

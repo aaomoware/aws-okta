@@ -24,3 +24,8 @@ variable iam_user_password_length          { default = "11" }
 variable iam_user_group_membership_name    { default = "" }
 variable iam_user_group_membership_group   { default = [] type = "list"}
 variable iam_user_password_reset_required  { default = true }
+
+#-- user policy
+variable iam_user_policy_name              { default = "" }
+variable iam_user_policy_user              { default = "" }
+variable iam_user_policy_policy            { default = "" }

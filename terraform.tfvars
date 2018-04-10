@@ -1,10 +1,26 @@
-provide_name                         = "okta"
+provider_name                        = "okta"
 
 iam_user_names                       = ["okta"]
 iam_user_access_key                  = "true"
 iam_user_gpg_keybase                 = { okta = "keybase:aaomoware" }
 iam_user_gpg_or_keybase              = "keybase"
 
+iam_user_policy_name                 = "aws-okta"
+iam_user_policy_policy               = <<EOF
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": [
+              "iam:ListRoles",
+              "iam:ListAccountAliases"
+          ],
+          "Resource": "*"
+        }
+    ]
+}
+EOF
 
 # - role
 iam_role_name = ["EC2FullAccess", "S3FullAccess", "CloudFrontFullAccess" ]
@@ -21,7 +37,7 @@ S3FullAccess = <<EOF
       {
         "Effect": "Allow",
         "Principal": {
-          "Federated": "arn:aws:iam::00000000000:saml-provider/okta"
+          "Federated": "arn:aws:iam::000000000000:saml-provider/okta"
         },
         "Action": "sts:AssumeRoleWithSAML",
         "Condition": {
@@ -40,7 +56,7 @@ EC2FullAccess = <<EOF
       {
         "Effect": "Allow",
         "Principal": {
-          "Federated": "arn:aws:iam::00000000000:saml-provider/okta"
+          "Federated": "arn:aws:iam::000000000000:saml-provider/okta"
         },
         "Action": "sts:AssumeRoleWithSAML",
         "Condition": {
@@ -59,7 +75,7 @@ CloudFrontFullAccess = <<EOF
       {
         "Effect": "Allow",
         "Principal": {
-          "Federated": "arn:aws:iam::00000000000:saml-provider/okta"
+          "Federated": "arn:aws:iam::000000000000:saml-provider/okta"
         },
         "Action": "sts:AssumeRoleWithSAML",
         "Condition": {
