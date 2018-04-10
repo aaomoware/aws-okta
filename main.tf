@@ -1,3 +1,11 @@
+module "id_provider" {
+  source = "git@github.com:aaomoware/terraform-modules.git//aws/iam/iam_saml_provider"
+
+  # - provider
+  name                                 = "${var.provider_name}"
+  saml_metadata_document               = "${file("metadata/saml-metadata.xml")}"
+}
+
 module "iam" {
   source = "git@github.com:aaomoware/terraform-modules.git//aws/iam/iam_group"
 
