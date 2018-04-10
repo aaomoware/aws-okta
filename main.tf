@@ -6,20 +6,8 @@ module "id_provider" {
   saml_metadata_document               = "${file("metadata/saml-metadata.xml")}"
 }
 
-module "iam" {
-  source = "git@github.com:aaomoware/terraform-modules.git//aws/iam/iam_group"
 
-# - groups
-  iam_group_path                       = "${var.iam_group_path}"
-  iam_group_names                      = "${var.iam_group_names}"
-
-  iam_group_policy_names               = "${var.iam_group_policy_names}"
-  iam_group_policy_policy              = "${var.iam_group_policy_policy}"
-  iam_group_policy_groups              = "${var.iam_group_policy_groups}"
-}
-
-
-module "iam" {
+module "iam_role" {
   source = "git@github.com:aaomoware/terraform-modules.git//aws/iam/iam_role"
 
 # - roles
@@ -33,7 +21,20 @@ module "iam" {
 }
 
 
-module "iam" {
+module "iam_group" {
+  source = "git@github.com:aaomoware/terraform-modules.git//aws/iam/iam_group"
+
+# - groups
+  iam_group_path                       = "${var.iam_group_path}"
+  iam_group_names                      = "${var.iam_group_names}"
+
+  iam_group_policy_names               = "${var.iam_group_policy_names}"
+  iam_group_policy_policy              = "${var.iam_group_policy_policy}"
+  iam_group_policy_groups              = "${var.iam_group_policy_groups}"
+}
+
+
+module "iam_user" {
   source = "git@github.com:aaomoware/terraform-modules.git//aws/iam/iam_user"
 
 # - users
