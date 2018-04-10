@@ -3,5 +3,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-central-1"
+  region                  = "eu-central-1"
+  profile                 = "aws-okta"
+  shared_credentials_file = "~/.aws/credentials"
 }
