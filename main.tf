@@ -32,6 +32,6 @@ module "iam_user_policy" {
   source = "git@github.com:aaomoware/terraform-modules.git//aws/iam/iam_user_policy"
 
    iam_user_policy_name                = "${var.iam_user_policy_name}"
-   iam_user_policy_user                = "okta"
+   iam_user_policy_user                = "${element(module.iam_user.iam_user_name,0)}"
    iam_user_policy_policy              = "${var.iam_user_policy_policy}"
 }
