@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://www.okta.com/exkkvq1ljakB6EikP0h7"><md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"><md:KeyDescriptor use="signing"><ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:X509Data><ds:X509Certificate>MIIDoDCCAoigAwIBAgIGAWpz5IoWMA0GCSqGSIb3DQEBBQUAMIGQMQswCQYDVQQGEwJVUzETMBEG
+A1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwET2t0YTEU
+MBIGA1UECwwLU1NPUHJvdmlkZXIxETAPBgNVBAMMCGNoZWNrb3V0MRwwGgYJKoZIhvcNAQkBFg1p
+bmZvQG9rdGEuY29tMB4XDTE5MDUwMTE0NTQxOFoXDTI5MDUwMTE0NTUxOFowgZAxCzAJBgNVBAYT
+AlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMQ0wCwYDVQQK
+DARPa3RhMRQwEgYDVQQLDAtTU09Qcm92aWRlcjERMA8GA1UEAwwIY2hlY2tvdXQxHDAaBgkqhkiG
+9w0BCQEWDWluZm9Ab2t0YS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCaOh0Q
+VB7+rsNZy9FSTdmzONi1AP5e6bSZshqllvyPGPJP8PExDxjQ1SnFNe1XjH+UYF4iZgIPjqae456w
+FZlCi1lSBEGECqGhexfdk4O6Ofvoz1CP5hqSDzsSzoYW/RoTGOiWjidp4CmoKhgiW4X3T6W+msCI
+dhkPOjstvhgpok1gRWWrXhRSG3WCp5zxMDM7+Mb0Ep3BodcJIEpsGTi/FToBxwsv+UPEVoai3T6f
+dKftogLjqjLNawuFIUBzpaR1JaT/Wn8UTOq7OCnlb1MwF4Swdy39udzUw9oQWmFbOzNZukQT0MSy
+n/DNsdq7t/Kgmp6iOY+Ehbqu5ArlGKQJAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBACst0h4hEG9W
+rXPBTeyiLP6C1o2arqlMp4jRIYKMp1DiYWOion/8Yk4+Urr0nCoTNd+72FimPX7CgvEZzYOx2gYS
+d1c3ytZVM9ezav1TfDcubd2iezPg1U7nbAdiz2jKasRigncyyjcIqCoLaXSeeSCJ9Dy11vMbhOtK
+L8HVz768xWDs8U1l0Djslkwc6p9hHpzgTEGmo4K1FtMuOqHXVFHvstPhYSw2MxA+bn/gioNOfKUX
+JzBVMRcPf/SA3agxlVJqpKe7Rpy4KfEj9y+f6y5eXgoDezBpNQ+w/BWCdrj6XnhMmlexHerocVbe
+mp962OCvnkyYXPr9Z/5h/XVJaTQ=</ds:X509Certificate></ds:X509Data></ds:KeyInfo></md:KeyDescriptor><md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat><md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat><md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://checkout.oktapreview.com/app/amazon_aws/exkkvq1ljakB6EikP0h7/sso/saml"/><md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://checkout.oktapreview.com/app/amazon_aws/exkkvq1ljakB6EikP0h7/sso/saml"/></md:IDPSSODescriptor></md:EntityDescriptor>
